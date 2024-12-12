@@ -128,9 +128,7 @@
 
 .hero-intro__title-line-1::after {
     /* Positioning */
-    position: absolute;
-    right: 0;
-    top: 0;
+
     
     /* Display & Box Model */
     width: 3px;
