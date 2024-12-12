@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Meta -->
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>TesuAOVVietnam</title>
+
+     <!-- Link -->
+     <link rel="stylesheet" href="./assets/css/reset.css">
+     <link rel="stylesheet" href="./assets/css/header.css">
+     <link rel="stylesheet" href="./assets/css/default.css">
+     <link rel="stylesheet" href="./assets/fonts/fonts.css">
+     <link rel="stylesheet" href="./assets/css/sponsors.css">
+     <link rel="stylesheet" href="./assets/css/hero-intro.css">
+     <link rel="stylesheet" href="./assets/css/responsive.css">
+     <link rel="stylesheet" href="./assets/css/hero-carousel.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.5/assets/owl.carousel.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.5/assets/owl.theme.default.min.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <section id="header"></section>
+
+    <!-- Hero Intro -->
+    <section id="hero-intro"></section>
+
+    <!-- Sponsors -->
+    <section id="sponsors"></section>
+
+    <!-- Hero Carousel -->
+    <section id="hero-carousel"></section>
+
+    
+    <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Import Sections | Start -->
+    <script>
+        $(document).ready(function() {
+            // Load header
+            $.ajax({
+                url: './assets/html/header.html',
+                method: 'GET',
+                success: function(data) {
+                    $('#header').html(data);
+                    // Initialize header functionality after header is loaded
+                    $.getScript('./assets/js/header.js');
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error loading header:', error);
+                }
+            });
+
+            // Load hero intro
+            $.ajax({
+                url: './assets/html/hero-intro.html',
+                method: 'GET',
+                success: function(data) {
+                    $('#hero-intro').html(data);
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error loading hero intro:', error);
+                }
+            });
+
+            // Load sponsors
+            $.ajax({
+                url: './assets/html/sponsors.html',
+                method: 'GET',
+                success: function(data) {
+                    $('#sponsors').html(data);
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error loading sponsors:', error);
+                }
+            });
+
+            // Load hero carousel
+            $.ajax({
+                url: './assets/html/hero-carousel.html',
+                method: 'GET',
+                success: function(data) {
+                    $('#hero-carousel').html(data);
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error loading hero carousel:', error);
+                }
+            });
+        });
+    </script>
+    <!-- Import Sections | End -->
+
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/owl.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.5/owl.carousel.min.js"></script>
+</body>
+</html>

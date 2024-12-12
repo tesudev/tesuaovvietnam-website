@@ -1,0 +1,9 @@
+@media (min-width: 768px) {
+     .header__menu {
+          display: flex; /* Hiển thị menu trên thiết bị lớn hơn */
+      }
+  
+      .header__mobile {
+          display: none; /* Ẩn nút menu di động trên thiết bị lớn hơn */
+      }
+ }

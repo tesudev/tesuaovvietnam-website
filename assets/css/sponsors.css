@@ -1,0 +1,42 @@
+/*-----------------------------------*\
+  #SPONSORS PROPERTY
+\*-----------------------------------*/
+
+/* Sponsors section */
+.sponsors {
+     padding: 40px 120px 0 120px;
+     margin-top: -60px;
+     position: relative;
+     z-index: 2;
+}
+
+.sponsors__container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 40px;
+     max-width: 1200px;
+     margin: 0 auto;
+}
+
+.sponsors__item {
+     flex: 1;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+     transition: transform 0.3s ease;
+     pointer-events: none;
+}
+
+.sponsors__item:hover {
+     cursor: default;
+}
+
+.sponsors__item-image {
+     max-width: 100%;
+     height: auto;
+     object-fit: contain;
+     transition: opacity 0.3s ease, filter 0.3s ease;
+     pointer-events: none;
+}

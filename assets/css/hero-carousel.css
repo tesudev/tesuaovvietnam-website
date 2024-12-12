@@ -1,0 +1,78 @@
+/* Hero section */
+.hero-carousel-container {
+     position: relative;
+     height: calc(70vh - var(--header-height));
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 0 120px;
+     margin-bottom: 60px;
+ }
+ 
+ .hero__carousel {
+     position: relative;
+     width: 90%;
+     height: 100%;
+     overflow: hidden;
+     margin: 0 auto;
+     border-radius: 20px;
+ }
+ 
+ .hero__carousel-item {
+     position: relative;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 20px;
+     overflow: hidden;
+ }
+ 
+ .hero__carousel-img {
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+     object-position: center;
+     border-radius: 20px;
+ }
+ 
+ .hero__carousel-dots {
+     position: absolute;
+     bottom: 20px;
+     left: 50%;
+     transform: translateX(-50%);
+     display: flex;
+     gap: 20px;
+ }
+ 
+ .hero__carousel-dot {
+     width: 14px;
+     height: 14px;
+     border: 2px solid var(--white-color);
+     background-color: transparent;
+     transform: rotate(45deg);
+     cursor: pointer;
+     transition: all 0.3s ease;
+     position: relative;
+ }
+ 
+ .hero__carousel-dot:hover {
+     transform: rotate(45deg) scale(1.2);
+ }
+ 
+ .hero__carousel-dot.active {
+     transform: rotate(45deg) scale(1.2);
+ }
+ 
+ .hero__carousel-dot.active::after {
+     content: '';
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 8px;
+     height: 8px;
+     background-color: var(--white-color);
+ }

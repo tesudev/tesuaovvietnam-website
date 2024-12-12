@@ -1,0 +1,78 @@
+:root {
+    /* Gộp các biến liên quan đến màu sắc */
+    --primary-color: #10182c;
+    --primary-text-color: #FFFFFF;
+    --secondary-text-color: #2ecc71;
+    --text-hover-color: #F5115C;
+    --background-color: #10182c;
+    --text-color: #333;
+    --grid-color: rgba(255, 255, 255, 0.015);
+    --dropdown-bg: #101a30;
+
+    /* Gộp các biến liên quan đến typography */
+    --font-family: 'Montserrat', sans-serif;
+    --font-size: 16px;
+    
+    /* Các biến khác */
+    --grid-size: 100px;
+    --padding: 1rem;
+    --border-radius: 5px;
+}
+
+/* Áp dụng các biến CSS vào các phần tử trong trang */
+body {
+    background-color: var(--background-color);
+    background-image: 
+        linear-gradient(var(--grid-color) 2px, transparent 2px),
+        linear-gradient(90deg, var(--grid-color) 2px, transparent 2px);
+    background-size: var(--grid-size) var(--grid-size);
+    background-position: center center;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+h2 {
+    color: var(--secondary-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    padding: var(--padding);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+     width: 8px;
+ }
+ 
+ ::-webkit-scrollbar-track {
+     background: var(--primary-color);
+     background-image: radial-gradient(rgba(0, 0, 0, 0) 1px, rgba(30, 41, 59, 0.5) 1px);
+     background-size: 4px 4px;
+     backdrop-filter: blur(12px);
+     -webkit-backdrop-filter: blur(12px);
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+     background-color: var(--primary-color);
+     border-radius: 100vh;
+ }
+ 
+ ::-webkit-scrollbar-thumb:hover {
+     background: #ff2e70;
+     box-shadow: 0 0 10px rgba(245, 17, 92, 0.6);
+ }
