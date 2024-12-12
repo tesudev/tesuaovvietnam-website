@@ -11,25 +11,7 @@
     overflow: hidden;
 }
 
-.hero-intro::before {
-    /* Positioning */
-    position: absolute;
-    bottom: 350px;
-    left: -200px;
-    
-    /* Display & Box Model */
-    width: 600px;
-    height: 600px;
-    
-    /* Color */
-    background: radial-gradient(circle at center, rgba(245, 17, 92, 0.3) 0%, transparent 100%);
-    
-    /* Other */
-    content: '';
-    filter: blur(100px);
-    pointer-events: none;
-    transform: translateZ(0);
-}
+
 
 .hero-intro__location {
     /* Positioning */
@@ -128,7 +110,9 @@
 
 .hero-intro__title-line-1::after {
     /* Positioning */
-
+    position: absolute;
+    right: 0;
+    top: 0;
     
     /* Display & Box Model */
     width: 3px;
